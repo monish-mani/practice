@@ -1,0 +1,46 @@
+package leetcode;
+
+public class Leetcode557 {
+	
+	public static void main(String args[]){
+		
+		String s="Let's take LeetCode contest";
+		System.out.println(reverseWords(s));
+		
+	}
+	
+	
+	
+	public static String reverseWords(String s) {
+        //1 -- Reverse the whole sentence
+        //2 -- Reverse individual word. Dont forget reverse the last word.
+        String reversedSentence = reverseSingleWord(s,0,s.length()-1);
+        int start=0;
+        int end=0;
+        
+        StringBuilder result = new StringBuilder();
+        
+        while(end <= s.length()-1){
+        	if(s.charAt(end)==' '){
+        		result.append(reverseSingleWord(s,start,end));
+        		result.append(s.charAt(end));
+        	}
+        	end++;
+        	start=end;
+        }
+        
+        return result.toString();
+        
+    }
+    
+    
+    public static String reverseSingleWord(String s,int start,int end){
+        StringBuilder result = new StringBuilder();
+        for(int i=end;i>=start;i--){
+            result.append(s.charAt(i));
+        }
+        return result.toString();
+        
+    }
+
+}
