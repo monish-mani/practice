@@ -1,0 +1,46 @@
+package leetcode;
+
+public class Leetcode408 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String word = "dum";
+		String abbr = "d1m";
+		String abbr1 = "du1";
+		System.out.println(validWordAbbreviation(word, abbr1));
+
+	}
+
+	public static boolean validWordAbbreviation(String word, String abbr) {
+		
+		//a-z --> 97 - 122
+		//0-9 --> 48 - 57
+		int i=0;
+		int j=0;
+		
+		while(i < word.length() && j < abbr.length()){
+			StringBuilder number = new StringBuilder();
+			if(abbr.charAt(j) <= 57){
+				while(j < abbr.length() && abbr.charAt(j) <= 57){
+					number.append(abbr.charAt(j));
+					j++;
+				}
+				int count = Integer.parseInt(number.toString());
+				i=i+count;
+			}else if(word.charAt(i)!= abbr.charAt(j)){
+				return false;
+			}else if(i == word.length() || j == word.length()){
+				break;
+			}
+			i++;
+			j++;
+		}
+		//Beacause of the last i++ and j++ they will be 1 more than word and abbr length
+		if(i == word.length() && j == abbr.length())
+			return true;
+		
+		return false;
+
+	}
+
+}
