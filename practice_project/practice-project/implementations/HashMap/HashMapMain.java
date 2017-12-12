@@ -29,7 +29,7 @@ public class HashMapMain {
 		hm.put(20,"bummer");
 		hm.put(20,"Monish");
 		hm.put(20,"Mon");
-		
+		hm.put(2009, "iiii");
 		
 		
 		

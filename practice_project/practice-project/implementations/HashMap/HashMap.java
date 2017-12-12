@@ -57,8 +57,9 @@ public class HashMap<K,V> {
 		}else{
 			//Traverse till the end of the list and add if its not there already
 			while(head!=null){
-				if(head.getKey().equals(key) && head.getValue().equals(value)){
-					System.out.println("Key value pair already exists in map! Cannot insert " + key.toString() + "->" + value.toString());
+				if(head.getKey().equals(key)){
+					System.out.println("Key "+key +" exists in map. Updating value from " + head.getValue().toString() + "->" + value.toString());
+					head.setValue(value);
 					return head.getValue();
 				}
 				prev = head;
