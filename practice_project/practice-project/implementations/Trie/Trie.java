@@ -8,9 +8,11 @@ public class Trie {
 
 	
 	
-	Trie(){
+	public Trie(){
 		root = new TrieNode();
 	}
+	
+	
 	
 	/*
 	 * Methods:
@@ -21,6 +23,18 @@ public class Trie {
 	 */
 	
 	
+	public TrieNode getRoot() {
+		return root;
+	}
+
+
+
+	public void setRoot(TrieNode root) {
+		this.root = root;
+	}
+
+
+
 	//Contains
 	public boolean contains(String word){
 		if(word == null || word.length()==0){

@@ -18,7 +18,31 @@ public class LinkedList<T> {
 	 * 8) Remove at position
 	 */
 	
-	LinkedList(){
+	public ListNode<T> getHead() {
+		return head;
+	}
+
+	public void setHead(ListNode<T> head) {
+		this.head = head;
+	}
+
+	public ListNode<T> getTail() {
+		return tail;
+	}
+
+	public void setTail(ListNode<T> tail) {
+		this.tail = tail;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+
+	public LinkedList(){
 		
 	}
 	
