@@ -22,7 +22,7 @@ public class BinaryTree {
 
 
 
-
+	//Constructing a tree by populating it from an array level by level
 	public BinaryTree(int[] nums) {
 		if(nums == null || nums.length == 0){
 			System.out.println("List is null or empty");
@@ -54,33 +54,6 @@ public class BinaryTree {
 		}
 	
 	}
-
-
-
-
-	/*public void BinaryTree (int[] nums){
-		if(nums == null || nums.length == 0){
-			System.out.println("List is null or empty");
-			return;
-		}
-		
-		int index=1;
-		root = new BinaryTreeNode(nums[index]);
-		LinkedList<BinaryTreeNode> queue = new LinkedList<>();
-		queue.add(root);
-		
-		while(index < nums.length){
-			BinaryTreeNode temp = queue.poll();
-			BinaryTreeNode leftChild = new BinaryTreeNode(nums[index++]);
-			BinaryTreeNode rightChild = new BinaryTreeNode(nums[index++]);
-			
-			temp.setLeft(leftChild);
-			temp.setRight(rightChild);
-			queue.add(leftChild);
-			queue.add(rightChild);
-		}
-	}*/
-	
 	
 
 }
