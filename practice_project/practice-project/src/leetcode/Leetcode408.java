@@ -6,8 +6,33 @@ public class Leetcode408 {
 		// TODO Auto-generated method stub
 		String word = "hi";
 		String abbr = "h2";
+		
+		String word2 = "monish";
+		String abbr2 = "mo4";
+		
+		String word3 = "anand";
+		String abbr3 = "5";
+		
+		String word4 = "sath";
+		String abbr4 = "10";
+		
+		
+		
+		/*
 		System.out.println(validWordAbbreviation(word, abbr));
-
+		System.out.println(validWordAbbreviation(word2, abbr2));
+		System.out.println(validWordAbbreviation(word3, abbr3));
+		System.out.println(validWordAbbreviation(word4, abbr4));
+		*/
+		
+		
+		System.out.println(validWordAbbreviation3(word, abbr));
+		System.out.println(validWordAbbreviation3(word2, abbr2));
+		System.out.println(validWordAbbreviation3(word3, abbr3));
+		System.out.println(validWordAbbreviation3(word4, abbr4));
+		
+		
+		
 	}
 
 	public static boolean validWordAbbreviation1(String word, String abbr) {
@@ -79,5 +104,69 @@ public class Leetcode408 {
 		}
 		
 		return (start1 - end1 == start2 - end2); 
+	}
+	
+	
+	public static boolean validWordAbbreviation3(String word,String abbr){
+		if(word == null & abbr == null ||(word.length() == 0 && abbr.length() == 0)){
+			return true;
+		}
+		
+		int start1=0;
+		int end1=word.length()-1;
+		
+		int start2=0;
+		int end2=abbr.length()-1;
+		
+		//Step 1: Parse out equal characters from start and from end
+		while(start1 <= end1 && start2<=end2){
+			if(word.charAt(start1) == abbr.charAt(start2)){
+				start1++;
+				start2++;
+			}else{
+				break;
+			}
+		}
+		
+		while(start1 <= end1 && start2<=end2){
+			if(word.charAt(end1) == abbr.charAt(end2)){
+				end1--;
+				end2--;
+			}else{
+				break;
+			}
+		}
+		
+		
+		
+		//In case where word and abbr are exactly the same
+		if(start1==end1+1 && start2==end2+1){
+			return true;
+		}
+		
+		//Step 2: Evaluate the remaining part
+		while(start2 <= end2){
+			if(abbr.charAt(start2) >= 48 && abbr.charAt(start2) <= 57){
+				char c = abbr.charAt(start2);
+				int add=((int)c-'0');
+				start1=start1 + add;
+				if(start1 == end1+1 && start2==end2){
+					return true;
+				}else if(start1 > end1){
+					return false;
+				}
+			}else{
+				if(word.charAt(start1) == abbr.charAt(start2)){
+					start1++;
+				}else{
+					return false;
+				}
+			}
+			start2++;
+		}
+		
+		
+		
+		return start1==end1;
 	}
 }

@@ -17,9 +17,8 @@ public class Trie {
 	/*
 	 * Methods:
 	 * 1) contains
-	 * 2) Find word
-	 * 3) Delete word
-	 * 4) Traverse(print all words)
+	 * 2) Delete word
+	 * 3) Traverse(print all words)
 	 */
 	
 	

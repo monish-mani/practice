@@ -17,6 +17,8 @@ public class Leetcode260 {
 		               -1293494866,612881857,661111294,-1361696369,1816352571,-1813882010,-359290212,1475115274,
 		               1793963758,1347212898,43772400,-1471385435,124075538,-1293494866,-119634980,390719949};
 		
+		System.out.println(Arrays.toString(singleNumber(nums)));
+		System.out.println(Arrays.toString(singleNumber(nums2)));
 		System.out.println(Arrays.toString(singleNumber(nums3)));
 		
 		LinkedList<Integer> queue = new LinkedList<>();
