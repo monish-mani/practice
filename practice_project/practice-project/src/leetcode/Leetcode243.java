@@ -9,6 +9,35 @@ public class Leetcode243 {
 		String word2="makes";
 		
 		System.out.println(shortestDistance(words, word1, word2));
+		System.out.println(shortestDistanceTake2(words, word1, word2));
+	}
+	
+	public static int shortestDistanceTake2(String[] words,String word1,String word2) {
+		if(words == null || words.length == 0) return -1;
+		
+		int minDistance = Integer.MAX_VALUE;
+		
+		//0 - word1 ,1 - word2
+		int[] lastPosition = new int[2];
+		lastPosition[0] = -1;
+		lastPosition[1] = -1;
+		
+		for(int i=0;i<words.length;i++) {
+			if(words[i].equals(word1)) {
+				lastPosition[0] = i;
+				if(lastPosition[1] > -1 && minDistance > (i-lastPosition[1])) {
+					minDistance = i - lastPosition[1];
+				}
+			}else if(words[i].equals(word2)) {
+				lastPosition[1] = i;
+				if(lastPosition[0] > -1 && minDistance > (i - lastPosition[0])) {
+					minDistance = i - lastPosition[0];
+				}
+			}
+		}
+		
+		
+		return minDistance;
 	}
 	
 	

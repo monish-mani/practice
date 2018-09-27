@@ -16,20 +16,14 @@ public class Leetcode408 {
 		String word4 = "sath";
 		String abbr4 = "10";
 		
-		
-		
-		/*
-		System.out.println(validWordAbbreviation(word, abbr));
-		System.out.println(validWordAbbreviation(word2, abbr2));
-		System.out.println(validWordAbbreviation(word3, abbr3));
-		System.out.println(validWordAbbreviation(word4, abbr4));
-		*/
-		
-		
-		System.out.println(validWordAbbreviation3(word, abbr));
-		System.out.println(validWordAbbreviation3(word2, abbr2));
-		System.out.println(validWordAbbreviation3(word3, abbr3));
-		System.out.println(validWordAbbreviation3(word4, abbr4));
+		String word5 = "internationalization";
+		String abbr5 ="i12iz4n";
+//		
+//		System.out.println(validWordAbbreviation4(word, abbr));
+//		System.out.println(validWordAbbreviation4(word2, abbr2));
+//		System.out.println(validWordAbbreviation4(word3, abbr3));
+//		System.out.println(validWordAbbreviation4(word4, abbr4));
+		System.out.println(validWordAbbreviation4(word5, abbr5));
 		
 		
 		
@@ -169,4 +163,38 @@ public class Leetcode408 {
 		
 		return start1==end1;
 	}
+	
+	
+	public static boolean validWordAbbreviation4(String word, String abbr) {
+        if(word == null && abbr == null || word.length()==0 && abbr.length()==0) return true;
+        
+        int i=0;
+        int j=0;
+        char a = 'a';
+        char b = 'b';
+        StringBuilder number = new StringBuilder();
+        
+        while(i < word.length() && j < abbr.length()){
+            a = word.charAt(i);
+            b = abbr.charAt(j);
+            
+            if(a == b){
+                i++;
+                j++;
+            }else if(b >= '0' && b <= '9'){
+                while(j < abbr.length() && abbr.charAt(j) >= '0' && abbr.charAt(j) <= '9'){
+                    number.append(abbr.charAt(j));
+                    j++;
+                }
+                i = i + Integer.parseInt(number.toString());
+                number = new StringBuilder();
+            }else{
+                return false;
+            }
+        }
+        
+        return i == word.length() && j == abbr.length() ? true : false;
+    
+	}
+	
 }
