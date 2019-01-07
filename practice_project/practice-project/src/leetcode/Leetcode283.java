@@ -1,32 +1,40 @@
 package leetcode;
 
+import java.util.Arrays;
+
 public class Leetcode283 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Leetcode283 lc283 = new Leetcode283();
+		//int a[] = {0,1,0,3,12};
+		int a[] = {1,0};
+		lc283.moveZeroes(a);
+		System.out.println(Arrays.toString(a));
 
 	}
 	
 	public void moveZeroes(int[] nums) {
-		if(nums == null || nums.length == 0) return;
-		int i=0,j=0;
-		while(i < nums.length) {
-			if(nums[i] == 0) i++;
-		}
-		j=i-1;
+		int nextZeroPos = findNextZeroPos(nums,0);
 		
-		while(j < nums.length) {
-			if(nums[j] == 0) {
-				i++;
-				j++;
-			}else {
-				int temp = nums[i];
-				nums[i] = nums[j];
-				nums[j] = temp;
-				j++;
+		for(int i=0;i<nums.length;i++) {
+			if(nums[i]!=0 && nextZeroPos >= 0 && nextZeroPos < i) {
+				swap(nums,i,nextZeroPos);
+				nextZeroPos = findNextZeroPos(nums,nextZeroPos);
 			}
 		}
 	}
 	
+	private int findNextZeroPos(int[] nums, int currPos) {
+		while(currPos < nums.length && nums[currPos]!=0) {
+			currPos++;
+		}
+		return  currPos < nums.length ? currPos : -1;
+	}
+	
+	private void swap(int[] nums, int pos1, int pos2) {
+		int temp = nums[pos1];
+		nums[pos1] = nums[pos2];
+		nums[pos2] = temp;
+	}
 
 }
