@@ -1,0 +1,21 @@
+package leetcode;
+
+import com.google.common.base.Splitter;
+
+public class Leetcode599 {
+	
+
+	public static void main(String[] args) {
+
+		String payload = "{prequestIdp:p26019d7c1670ad790c175547ffdb4df5p,pprimaryUserTypep:pSELLERp,psellerp:{puserIdp:1218962050},pclientp:pSYIp,psiteIdp:186,prlogIdp:pt6ovrtzkjqp%3F%3Cwk%7Djtwv%7Fiosu*1%3D775%3C%3E%29pqtfwpu%29sm%7E%29fgg%7E-fij-16726019d67-0x1aap,psyncElvisEvaluationTimeoutp:false,pcategoriesp:[112529],pbrowserHeaderInfop:{},penvironmentInfop:{ppageIdp:0,pcommandNamep:pp,preturnURLp:pp,pendUserApplicationIdp:193541,papplicationIdp:193541,pcobrandIdp:0,pmachineGroupIdp:-1,pclientIpp:p95.131.137.18p,poldCookieIdp:0,psuccessPayPalTransactionp:false,psojournerGuidp:pnullp,psiteIdp:0,puserChannelTypep:pUNKNOWNp,pdeviceOsTypep:pUNKNOWNp},pscratchIdp:0,psaleInfop:{pcategoriesp:[112529],psaleIdp:163381098019,psaleTypep:9,plistingSpecificDatap:{preturnPolicyp:phttp://www.informaticapavon.es/content/14-politica-de-devoluciones\\np,pdomesticHandlingFeep:0.0,pintlHandlingFeep:0.0,pshippingServiceFeeMapp:{p18620p:0.0},pshippingMethodp:18620,pshippingOptionp:0,pshippingOverridep:0.0,pestimatedShippingp:0.0,ppaymentMethodsp:[11],pattrEnumMapp:{pEANp:p8056045870377p,pMOTORS_MANUFACTURER_PART_NUMBERp:null,pMOTORS_OTHER_PART_NUMBERp:null,pMOTORS_INTERCHANGE_PART_NUMBERp:null,pUPCp:null},psellerTagMapp:{pMarcap:pEwentp,pMPNp:pEW3584p},plistingVariationListp:[],pshipToLocationsp:pESPp,pisMskuListingp:false,pselectedReturnPolicyp:pDevolucionesaceptadasp,psellerHandlingTimep:2,pconditionp:pNEWp,pisAttributesPopulatedp:true,pexcludeShipToLocationsp:pp},pitemp:{pitemTitlep:pEwent - EW3584 Negro Intraaural Dentro de oído auricularp,pattributesChunksp:p|2|-100|INTERNAL||||7|153|100|GCS_ID|4|-8|3065|Estado del artículo|4|-9|152573|VMV|4|-30|1|VCS_CATY|4|-52|0|CATL|4|-55|1|GL|4|-20|2|ISV|4|-100|INTERNAL||||7|153|101|GCS_ID|4|-8|41|SS|4|-9|0|VMV|4|-30|102|VCS_CATY|4|-52|0|CATL|4|-55|0|GL|4|-20|2|ISV|4|201||1|0||2|-3|0:18628||5|-3|1:0||5|200||1|0||2|-3|0:1||5|-3|1:2||5|202||1|0||2|-3|0:0.0_7||5|-3|1:||5|234||1|0||2|-3|0:0.0_7||5|-3|1:||5|204||1|0||2|-3|0:0.0_7||5|-3|1:||5|203||1|0||2|-3|0:0.0_7||5|-3|1:0.0_7||5|205||1|0||2|-3|0:null||5|-3|1:null||5|206||1|0||2|-3|0:ESP||5|-3|1:||5|222||1|0||2|-3|0:0||5|-3|1:0||5|223||1|0||2|-3|0:||5|-3|1:||5|224||1|0||2|-3|0:0.0||5|-3|1:0.0||5|225||1|0||2|-3|0:0||5|-3|1:0||5|226||1|0||2|-3|0:0||5|-3|1:0||5|227||1|0||2|-3|0:0||5|-3|1:0||5|229||1|0||2|-3|0:||5|-3|1:||5|232||1|0||2|-3|0:4||5|-3|1:4||5|233||1|0||2|-3|0:||5|-3|1:||5|5000||1|0||2|-3|0:||5|-3|1:||5|3979||1|0||1|-3|-1||5|3980||1|0||1|-3|-1||5|228||1|0||1|-3|2||5|221||1|0||1|-3|ESP||5|4078||1|0||0|4125||1|0||0|-100|INTERNAL||||7|153|102|GCS_ID|4|-8|2934|RESERVCS|4|-9|0|VMV|4|-30|54|VCS_CATY|4|-52|0|CATL|4|-55|0|GL|4|-20|2|ISV|4|4080||1|0||1|1000|1000||9|4119||1|0||1|-15|1||9|4152||1|0||1|-15|0||9|-100|INTERNAL||||7|153|102|GCS_ID|4|-8|57|BUYER_REQUIREMENTS|4|-9|0|VMV|4|-30|57|VCS_CATY|4|-52|0|CATL|4|-55|0|GL|4|-20|2|ISV|4|3949||1|0||1|-14|||12|3950||1|0||1|-14|||12|3951||1|0||1|-100|||12|3952||1|0||1|-14|||12|4049||1|0||1|-100|||12|4050||1|0||1|-100|||12|3953||1|0||1|-100|||12|3954||1|0||1|-100|||12|3955||1|0||1|-100|||12|3956||1|0||1|-100|||12|3957||1|0||1|-15|1542530898418||12|-100|INTERNAL||||7|153|101|GCS_ID|4|-8|3015|ReturnPolicy|4|-9|69896|VMV|4|-30|1|VCS_CATY|4|-52|0|CATL|4|-55|1|GL|4|-20|2|ISV|4|3803|Returns Accepted|1|0||1|32040|Devoluciones aceptadas|Devoluciones aceptadas|0|3806|Detalles de la política de devoluciones|1|0||1|-3|http://www.informaticapavon.es/content/14-politica-de-devoluciones\\n|http://www.informaticapavon.es/content/14-politica-de-devoluciones\\n|0|3804|Tras recibir el artículo, tu comprador debe cancelar la compra en un plazo de|1|0||1|32035|14 días|14 días|0|3993|Los gastos de envío de la devolución correrán a cargo de|1|0||1|81120|Comprador|Comprador|0|-100|INTERNAL||||7|153|102|GCS_ID|4|-8|2934|RESERVCS|4|-9|0|VMV|4|-30|70|VCS_CATY|4|-52|0|CATL|4|-55|0|GL|4|-20|2|ISV|4|4114||1|0||1|-3|8056045870377||13|4111||1|0||1|-3|EW3584||13|-100|INTERNAL||||7|153|102|GCS_ID|4|-8|58|SELLER_TAGGING|4|-9|0|VMV|4|-30|58|VCS_CATY|4|-52|0|CATL|4|-55|0|GL|4|";
+		System.out.println("Payload length:" + payload.length());
+		Iterable<String> result = Splitter.fixedLength(4000).split(payload);
+		
+		for(String s : result) {
+			System.out.println(s);
+		}
+	
+
+	}
+
+}

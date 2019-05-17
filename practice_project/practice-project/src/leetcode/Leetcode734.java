@@ -19,10 +19,6 @@ public class Leetcode734 {
             return true;
         }
         
-        if(words1.length == 0 && words2.length==0){
-            return true;
-        }
-        
         if(words1.length!=words2.length){
             return false;
         }
